@@ -2,7 +2,6 @@ export const nav_style = (theme) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  p: '32px',
 });
 
 export const links_style = (theme) => ({

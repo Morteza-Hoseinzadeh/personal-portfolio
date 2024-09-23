@@ -8,6 +8,7 @@ import { Box } from '@mui/material';
 
 // components
 import Navbar from './components/navbar';
+import HeroSection from './components/hero-section';
 
 // Theme styles
 import { ThemeProvider } from '@mui/material/styles';
@@ -16,9 +17,11 @@ import themeDark from './utils/theme/darkTheme';
 
 // Redux store
 import { useSelector } from 'react-redux';
+import SnowEffect from './style/snowEffect/snowEffect';
 
 const box_style = (theme) => ({
   fontFamily: theme.typography.fontFamily,
+  p: '32px',
 });
 
 function App() {
@@ -27,20 +30,18 @@ function App() {
 
   useEffect(() => {
     document.body.style.background = theme.palette.background.default;
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.height = '100vh';
-
+    document.body.style.height = '100%';
     return () => {
       document.body.style.background = '';
-      document.body.style.height = '';
-      document.body.style.width = '';
     };
   }, [theme]);
 
   return (
     <ThemeProvider theme={theme}>
+      <SnowEffect />
       <Box sx={box_style(theme)}>
         <Navbar theme={theme} />
+        <HeroSection theme={theme} />
       </Box>
     </ThemeProvider>
   );
