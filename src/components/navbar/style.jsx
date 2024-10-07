@@ -13,9 +13,31 @@ export const nav_style = (theme) => ({
 export const links_style = (theme) => ({
   display: 'flex',
   alignItems: 'center',
-  h6: {
-    mx: 2,
+  a: {
+    mx: 2.5,
     cursor: 'pointer',
+    textDecoration: 'none',
+    fontWeight: '500',
+    fontSize: '20px',
+    display: 'inline-block',
+    position: 'relative',
+    '::after': {
+      content: '""',
+      position: 'absolute',
+      width: '100%',
+      transform: 'scaleX(0)',
+      borderRadius: '5px',
+      height: '0.07em',
+      bottom: -4,
+      left: 0,
+      background: 'currentColor',
+      transformOrigin: 'bottom right',
+      transition: 'transform 0.25s ease-out',
+    },
+    '&:hover::after': {
+      transform: 'scaleX(1)',
+      transformOrigin: 'bottom left',
+    },
   },
 });
 
