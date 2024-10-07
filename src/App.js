@@ -21,7 +21,7 @@ import SnowEffect from './style/snowEffect/snowEffect';
 
 const box_style = (theme) => ({
   fontFamily: theme.typography.fontFamily,
-  p: '32px',
+  p: '16px 32px',
 });
 
 function App() {
@@ -30,7 +30,8 @@ function App() {
 
   useEffect(() => {
     document.body.style.background = theme.palette.background.default;
-    document.body.style.height = '100%';
+    document.body.style.height = 'fit-content';
+    document.body.style.backgroundRepeat = 'no-repeat';
     return () => {
       document.body.style.background = '';
     };
@@ -39,9 +40,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <SnowEffect />
-      <Box sx={box_style(theme)}>
+      <Box sx={{ position: 'relative !important' }}>
         <Navbar theme={theme} />
-        <HeroSection theme={theme} />
+        <Box sx={box_style(theme)}>
+          <HeroSection theme={theme} />
+        </Box>
       </Box>
     </ThemeProvider>
   );
