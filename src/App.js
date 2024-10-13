@@ -10,6 +10,7 @@ import { Box } from '@mui/material';
 import Navbar from './components/navbar';
 import HeroSection from './components/hero-section';
 import Statistices from './components/statistices';
+import Skills from './components/skills';
 
 // Theme styles
 import { ThemeProvider } from '@mui/material/styles';
@@ -49,6 +50,9 @@ function App() {
           </CustomBox>
           <CustomBox>
             <Statistices theme={theme} darkMode={darkMode} />
+          </CustomBox>
+          <CustomBox>
+            <Skills theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>
       </Box>
