@@ -1,4 +1,7 @@
 export const nav_style = (theme) => ({
+  position: 'sticky',
+  top: 10,
+  zIndex: 100,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
