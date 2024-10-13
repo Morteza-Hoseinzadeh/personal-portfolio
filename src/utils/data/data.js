@@ -2,19 +2,10 @@
 import html from '../../assets/icons/icons8-html-5.svg';
 import css from '../../assets/icons/icons8-css3.svg';
 import js from '../../assets/icons/icons8-javascript.svg';
-import bootstrap from '../../assets/icons/icons8-bootstrap.svg';
 import tailwind from '../../assets/icons/icons8-tailwind-css.svg';
 import sass from '../../assets/icons/icons8-sass.svg';
 import react from '../../assets/icons/icons8-react-native.svg';
 import typescript from '../../assets/icons/icons8-typescript.svg';
-import redux from '../../assets/icons/icons8-redux.svg';
-import npm from '../../assets/icons/icons8-npm.svg';
-import git from '../../assets/icons/icons8-git.svg';
-import github from '../../assets/icons/icons8-github.svg';
-import firebase from '../../assets/icons/icons8-firebase.svg';
-import mui from '../../assets/icons/icons8-material-ui.svg';
-import yarn from '../../assets/icons/yarn-package-manager-icon.svg';
-import jquery from '../../assets/icons/jquery-icon.svg';
 import nextJs from '../../assets/icons/icons8-nextjs.svg';
 import nodeJs from '../../assets/icons/icons8-node-js.svg';
 import expressJs from '../../assets/icons/icons8-express-js.svg';
@@ -32,16 +23,16 @@ export const nav_links = [
 
 // skills list
 export const skills_data = [
-  { title: 'Web Development Fundamentals', src: [html, css, js] },
-  { title: 'CSS Frameworks', src: [bootstrap, tailwind] },
-  { title: 'CSS Preprocessors', src: [sass] },
-  { title: 'JavaScript Frameworks', src: [react, typescript, nextJs] },
-  { title: 'JavaScript Libraries', src: [jquery] },
-  { title: 'State Management', src: [redux] },
-  { title: 'Package Managers', src: [npm, yarn] },
-  { title: 'Version Control', src: [git] },
-  { title: 'Deployment Platforms', src: [firebase, github] },
-  { title: 'UI Component Libraries', src: [mui] },
-  { title: 'Backend Development', src: [nodeJs, expressJs] },
-  { title: 'Database Technologies', src: [mongodb, mySql] },
+  { title: 'HTML', src: html, value: '100%' },
+  { title: 'CSS', src: css, value: '100%' },
+  { title: 'JavaScript', src: js, value: '98%' },
+  { title: 'React Js', src: react, value: '97%' },
+  { title: 'Next js', src: nextJs, value: '95%' },
+  { title: 'TypeScript', src: typescript, value: 'Taking a course' },
+  { title: 'Tailwind', src: tailwind, value: '95%' },
+  { title: 'Sass', src: sass, value: '96%' },
+  { title: 'Node Js', src: nodeJs, value: '50%' },
+  { title: 'Express', src: expressJs, value: '50%' },
+  { title: 'Mongo-db', src: mongodb, value: '50%' },
+  { title: 'MySQL', src: mySql, value: '50%' },
 ];
