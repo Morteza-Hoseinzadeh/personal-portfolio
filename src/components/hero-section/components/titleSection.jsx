@@ -3,18 +3,10 @@ import React from 'react';
 import CustomTypography from '../../../custom-components/typography';
 // MUI imports
 import { Box, Button, IconButton } from '@mui/material';
-// Icons
-import { FaTelegramPlane } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
-import { FaLinkedinIn } from 'react-icons/fa';
+// Icon Array
+import { icon_properties } from '../../../utils/data/data';
 
 export default function TitleSection({ theme }) {
-  const icon_properties = [
-    { icon: <FaGithub />, url: 'https://github.com/yourprofile', fontSize: 24, color: theme.palette.text.primary },
-    { icon: <FaLinkedinIn />, url: 'https://linkedin.com/in/yourprofile', fontSize: 24, color: theme.palette.text.primary },
-    { icon: <FaTelegramPlane />, url: 'https://t.me/yourprofile', fontSize: 24, color: theme.palette.text.primary },
-  ];
-
   return (
     <>
       <Box>
@@ -43,7 +35,7 @@ export default function TitleSection({ theme }) {
         <Button variant='contained' size='large' sx={{ backgroundColor: theme.palette.primary.dark }}>
           Contact Me !
         </Button>
-        {icon_properties?.map((item, index) => (
+        {icon_properties(theme)?.map((item, index) => (
           <IconButton key={index} component='a' href={item.url} target='_blank' rel='noopener noreferrer' sx={{ border: '1px solid #fff' }}>
             {React.cloneElement(item.icon, { size: item.fontSize, color: item.color })}
           </IconButton>
