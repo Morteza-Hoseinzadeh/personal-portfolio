@@ -17,7 +17,7 @@ const themeDark = createTheme({
       contrastText: '#fff',
     },
     background: {
-      default: 'linear-gradient(280deg, #2b4162 0%, #12100e 74%)',
+      default: 'linear-gradient(240deg, #2b4162 0%, #12100e 74%)',
       paper: '#ffffff',
       dark: '#e0e0e0',
       primary: '#ffffff',
