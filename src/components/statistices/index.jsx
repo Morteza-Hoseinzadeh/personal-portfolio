@@ -13,7 +13,7 @@ export default function Statistices({ theme, darkMode }) {
     <Grid container spacing={8} position='relative'>
       {statistices?.map((item, index) => {
         return (
-          <Grid key={index} size={{ xs: 12, md: 6, lg: 3 }} sx={container_box_style}>
+          <Grid key={index} size={{ xs: 12, sm: 6, md: 4, lg: 3 }} sx={container_box_style}>
             <StatisticCards theme={theme} item={item} />
           </Grid>
         );
