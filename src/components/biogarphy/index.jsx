@@ -16,7 +16,7 @@ const Biography = ({ theme, darkMode }) => {
   return (
     <Box>
       <Box textAlign='center' mb={1}>
-        <CustomTypography theme={theme} variant='h3'>
+        <CustomTypography theme={theme} variant='h3' fontWeight={'bold'}>
           About Me
         </CustomTypography>
       </Box>
