@@ -53,10 +53,10 @@ function App() {
             <Statistices theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
-            <Skills theme={theme} darkMode={darkMode} />
+            <Biography theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
-            <Biography theme={theme} darkMode={darkMode} />
+            <Skills theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>
       </Box>
