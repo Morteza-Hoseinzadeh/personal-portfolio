@@ -9,6 +9,7 @@ import { Box } from '@mui/material';
 // components
 import Navbar from './components/navbar';
 import HeroSection from './components/hero-section';
+import Biography from './components/biogarphy';
 
 // Theme styles
 import { ThemeProvider } from '@mui/material/styles';
@@ -43,11 +44,20 @@ function App() {
       <Box sx={{ position: 'relative !important' }}>
         <Navbar theme={theme} />
         <Box sx={box_style(theme)}>
-          <HeroSection theme={theme} />
+          <CustomBox>
+            <HeroSection theme={theme} />
+          </CustomBox>
+          <CustomBox>
+            <Biography theme={theme} darkMode={darkMode} />
+          </CustomBox>
         </Box>
       </Box>
     </ThemeProvider>
   );
+}
+
+function CustomBox({ children }) {
+  return <Box mb={12}>{children}</Box>;
 }
 
 export default App;
