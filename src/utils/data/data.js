@@ -7,7 +7,7 @@ import html from '../../assets/icons/icons8-html-5.svg';
 import css from '../../assets/icons/icons8-css3.svg';
 import js from '../../assets/icons/icons8-javascript.svg';
 import tailwind from '../../assets/icons/icons8-tailwind-css.svg';
-import sass from '../../assets/icons/icons8-sass.svg';
+import git from '../../assets/icons/icons8-git.svg';
 import react from '../../assets/icons/icons8-react-native.svg';
 import typescript from '../../assets/icons/icons8-typescript.svg';
 import nextJs from '../../assets/icons/icons8-nextjs.svg';
@@ -44,10 +44,10 @@ export const skills_data = [
   { title: 'CSS', src: css, value: '100%' },
   { title: 'JavaScript', src: js, value: '98%' },
   { title: 'React Js', src: react, value: '97%' },
+  { title: 'Git', src: git, value: '100%' },
   { title: 'Next js', src: nextJs, value: '95%' },
   { title: 'TypeScript', src: typescript, value: 'Taking a course' },
   { title: 'Tailwind', src: tailwind, value: '95%' },
-  { title: 'Sass', src: sass, value: '96%' },
   { title: 'Node Js', src: nodeJs, value: '50%' },
   { title: 'Express', src: expressJs, value: '50%' },
   { title: 'Mongo-db', src: mongodb, value: '50%' },
