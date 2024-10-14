@@ -22,6 +22,9 @@ export const ListSectionCard = (theme, darkMode) => ({
   border: `2px solid ${darkMode ? theme.palette.primary.dark : theme.palette.primary.light}`,
   backgroundColor: `${darkMode ? theme.palette.primary.dark : theme.palette.primary.light}`,
   boxShadow: `${darkMode ? theme.palette.primary.dark : theme.palette.primary.light} 0px 0px 10px`,
+  '&:hover': {
+    transform: 'scale(1.02)',
+  },
 });
 
 export const flex_center = () => ({
