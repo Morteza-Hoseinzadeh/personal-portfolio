@@ -43,11 +43,17 @@ function App() {
       <Box sx={{ position: 'relative !important' }}>
         <Navbar theme={theme} />
         <Box sx={box_style(theme)}>
-          <HeroSection theme={theme} />
+          <CustomBox>
+            <HeroSection theme={theme} />
+          </CustomBox>
         </Box>
       </Box>
     </ThemeProvider>
   );
+}
+
+function CustomBox({ children }) {
+  return <Box mb={12}>{children}</Box>;
 }
 
 export default App;
