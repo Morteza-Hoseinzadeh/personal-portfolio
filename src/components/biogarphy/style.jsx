@@ -15,7 +15,8 @@ export const icon_style = (theme, darkMode) => ({
 export const ListSectionCard = (theme, darkMode) => ({
   display: 'flex',
   alignItems: 'center',
-  padding: '32px',
+  padding: '16px',
+  justifyContent: 'left',
   borderRadius: '12px',
   cursor: 'pointer',
   transition: 'all 0.2s ease',
