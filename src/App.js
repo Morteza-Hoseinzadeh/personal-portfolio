@@ -57,10 +57,10 @@ function App() {
             <Biography theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
-            <Skills theme={theme} darkMode={darkMode} />
+            <Experience theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
-            <Experience theme={theme} darkMode={darkMode} />
+            <Skills theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>
       </Box>
