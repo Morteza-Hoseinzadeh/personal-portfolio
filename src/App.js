@@ -12,6 +12,7 @@ import HeroSection from './components/hero-section';
 import Statistices from './components/statistices';
 import Skills from './components/skills';
 import Biography from './components/biogarphy';
+import Experience from './components/experience';
 
 // Theme styles
 import { ThemeProvider } from '@mui/material/styles';
@@ -57,6 +58,9 @@ function App() {
           </CustomBox>
           <CustomBox>
             <Skills theme={theme} darkMode={darkMode} />
+          </CustomBox>
+          <CustomBox>
+            <Experience theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>
       </Box>
