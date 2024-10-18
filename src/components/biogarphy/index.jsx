@@ -1,6 +1,6 @@
 import React from 'react';
 // MUI imports
-import { Box, Divider, Grid2, Stack, useMediaQuery } from '@mui/material';
+import { Box, Divider, Grid2, Stack, Typography, useMediaQuery } from '@mui/material';
 // Style
 import { ListSectionCard } from './style';
 // Custom components
@@ -42,15 +42,15 @@ const BiographySection = ({ theme, isMatchMdDown }) => (
   <Box display='flex' alignItems='center'>
     {!isMatchMdDown && (
       <Box mr={2}>
-        <img src={myAvatar} alt='My Avatar' width={200} style={{ borderRadius: '15px' }} />
+        <img src={myAvatar} alt='My Avatar' width={175} style={{ borderRadius: '15px' }} />
       </Box>
     )}
     <Box>
-      <CustomTypography theme={theme}>
+      <Typography fontSize={18} color={theme.palette.primary.main}>
         I’m Morteza Hosseinzadeh, a 19-year-old frontend developer with a passion for learning and technology. I’ve developed skills in HTML, CSS,
         SASS, Bootstrap, Tailwind, JavaScript, jQuery, React.js, TypeScript, Next.js, Git, npm, Yarn, and MUI. I’m dedicated to creating responsive,
         user-friendly interfaces and eager to tackle new challenges in web development.
-      </CustomTypography>
+      </Typography>
     </Box>
   </Box>
 );
