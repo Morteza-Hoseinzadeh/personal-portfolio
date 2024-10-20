@@ -13,6 +13,7 @@ import Statistices from './components/statistices';
 import Skills from './components/skills';
 import Biography from './components/biogarphy';
 import Experience from './components/experience';
+import Socail from './components/social';
 
 // Theme styles
 import { ThemeProvider } from '@mui/material/styles';
@@ -61,6 +62,7 @@ function App() {
           </CustomBox>
           <CustomBox>
             <Skills theme={theme} darkMode={darkMode} />
+            <Socail theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>
       </Box>

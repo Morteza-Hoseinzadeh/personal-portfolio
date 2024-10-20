@@ -23,6 +23,9 @@ import { BiCoffee } from 'react-icons/bi';
 import ArianaImg from '../../assets/image/Company-Images/ariana.webp';
 import Rahaco from '../../assets/image/Company-Images/rahaco.webp';
 import KishInstitute from '../../assets/image/Company-Images/KishInstitute.jpg';
+// Socail Media Icons
+import { FaGithub, FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 // Navbar links
 export const nav_links = [
@@ -140,3 +143,30 @@ export const experience_info = {
     },
   ],
 };
+export const social_media_links = (color) => [
+  {
+    title: 'Github',
+    icon: <FaGithub size={48} color={color} />,
+    href: 'https://github.com/Morteza-Hoseinzadeh/',
+  },
+  {
+    title: 'Linkedin',
+    icon: <FaLinkedin size={48} color={color} />,
+    href: 'https://linkedin.com/in/morteza-hoseinzadeh-b735b7288',
+  },
+  {
+    title: 'Telegram',
+    icon: <FaTelegram size={48} color={color} />,
+    href: 'https://t.me/morteza_hnz',
+  },
+  {
+    title: 'Instagram',
+    icon: <FaInstagram size={48} color={color} />,
+    href: 'https://instagram.com/_itsmrtza_',
+  },
+  {
+    title: 'Gmail',
+    icon: <MdEmail size={48} color={color} />,
+    href: 'mailto:morteza.hosseinzadeh8413@gmail.com',
+  },
+];
