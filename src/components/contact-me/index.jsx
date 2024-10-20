@@ -34,7 +34,7 @@ export default function ContactMe({ theme, darkMode }) {
   };
 
   return (
-    <>
+    <section id='Contact'>
       <Box textAlign={'center'} mb={3}>
         <Header theme={theme} />
       </Box>
@@ -63,7 +63,7 @@ export default function ContactMe({ theme, darkMode }) {
           <ContactMeDeatils theme={theme} />
         </Grid2>
       </Grid2>
-    </>
+    </section>
   );
 }
 

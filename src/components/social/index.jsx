@@ -8,7 +8,7 @@ import { social_media_links } from '../../utils/data/data';
 
 export default function Social({ theme, darkMode }) {
   return (
-    <>
+    <section id='Social'>
       <Box textAlign={'center'} mb={1}>
         <Box mb={1}>
           <CustomTypography theme={theme} variant={'h3'} fontWeight={'bold'}>
@@ -28,6 +28,6 @@ export default function Social({ theme, darkMode }) {
           </Box>
         ))}
       </Box>
-    </>
+    </section>
   );
 }

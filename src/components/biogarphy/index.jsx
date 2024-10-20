@@ -14,7 +14,7 @@ const Biography = ({ theme, darkMode }) => {
   const isMatchMdDown = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <Box>
+    <section id='About'>
       <Box textAlign='center' mb={1}>
         <CustomTypography theme={theme} variant='h3' fontWeight={'bold'}>
           About Me
@@ -34,7 +34,7 @@ const Biography = ({ theme, darkMode }) => {
           <StrengthsSection theme={theme} darkMode={darkMode} />
         </Grid2>
       </Grid2>
-    </Box>
+    </section>
   );
 };
 

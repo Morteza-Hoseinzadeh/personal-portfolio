@@ -13,7 +13,7 @@ import { experience_section_style, iconTransition, imgStyle, slideAnimation } fr
 
 export default function Experience({ darkMode, theme }) {
   return (
-    <>
+    <section id='Experience'>
       <Grid2 container spacing={4}>
         <Grid2 size={{ xs: 12, lg: 6 }}>
           <Box mb={4} display={'flex'} justifyContent={'center'} alignItems={'center'}>
@@ -32,7 +32,7 @@ export default function Experience({ darkMode, theme }) {
           <CardsSection theme={theme} darkMode={darkMode} data={experience_info.education} />
         </Grid2>
       </Grid2>
-    </>
+    </section>
   );
 }
 

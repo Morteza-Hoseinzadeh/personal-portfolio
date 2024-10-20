@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
+
 // Mui imports
 import { Box, Divider, Drawer, Grid2, Link, List, ListItem, ListItemButton, ListItemText, Typography, useMediaQuery } from '@mui/material';
+
 // Redux Store
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from '../../utils/redux/action';
+
 // Icons
 import { BsTranslate } from 'react-icons/bs';
 import { MdOutlineWbSunny } from 'react-icons/md';
 import { FaRegMoon } from 'react-icons/fa';
 import { CgMenu } from 'react-icons/cg';
+
 // Dataes
 import { nav_links } from '../../utils/data/data';
+
 // Custom styles
 import { drawer_section, humberger_menu, icon_style, justify_items, links_style, nav_style } from './style';
 import { NavLinks } from './components/links';
+
+// Scroll links
+import { Link as ScrollLink } from 'react-scroll';
 
 // Reusable Icons and Theming Toggle
 const ThemeIcon = ({ isDarkMode, toggleDarkMode }) => (
@@ -33,13 +41,13 @@ const DrawerContent = ({ onClose }) => (
     <Divider />
     <List>
       {nav_links.map((item, index) => (
-        <ListItem key={index} disablePadding>
-          <ListItemButton onClick={onClose}>
-            <ListItemText>
-              <Link style={{ textDecoration: 'none', fontSize: 18 }}>{item.title}</Link>
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
+        <ScrollLink to={item.to} spy={true} offset={-110} smooth={true} duration={500} style={{ cursor: 'pointer', textDecoration: 'none' }}>
+          <ListItem key={index} disablePadding>
+            <ListItemButton onClick={onClose}>
+              <ListItemText>{item.title}</ListItemText>
+            </ListItemButton>
+          </ListItem>
+        </ScrollLink>
       ))}
     </List>
     <Divider />

@@ -29,11 +29,11 @@ import { MdEmail } from 'react-icons/md';
 
 // Navbar links
 export const nav_links = [
-  { title: 'About', to: 'AboutMe' },
-  { title: 'Skills', to: 'MySkills' },
-  { title: 'Experience', to: 'MyExperience' },
-  { title: 'Social', to: 'MySocialMedia' },
-  { title: 'Contact', to: 'ContactMe' },
+  { title: 'About', to: 'About' },
+  { title: 'Social', to: 'Social' },
+  { title: 'Experience', to: 'Experience' },
+  { title: 'Skills', to: 'Skills' },
+  { title: 'Contact', to: 'Contact' },
 ];
 
 // Hero section icons

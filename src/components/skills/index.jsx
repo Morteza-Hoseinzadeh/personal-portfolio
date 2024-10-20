@@ -15,7 +15,7 @@ export default function Skills({ theme, darkMode }) {
   const matchMdDown = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <>
+    <section id='Skills'>
       <Box textAlign='center' sx={grid_cards_container} mb={4}>
         <CustomTypography theme={theme} variant='h3' fontWeight={'bold'}>
           My Skills
@@ -31,6 +31,6 @@ export default function Skills({ theme, darkMode }) {
           <SkillCard key={index} skill={skill} darkMode={darkMode} theme={theme} />
         ))}
       </Grid>
-    </>
+    </section>
   );
 }
