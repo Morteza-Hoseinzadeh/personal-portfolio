@@ -38,9 +38,9 @@ export const nav_links = [
 
 // Hero section icons
 export const icon_properties = (theme) => [
-  { icon: <FaGithub />, url: 'https://github.com/yourprofile', fontSize: 24, color: theme.palette.text.primary },
-  { icon: <FaLinkedinIn />, url: 'https://linkedin.com/in/yourprofile', fontSize: 24, color: theme.palette.text.primary },
-  { icon: <FaTelegramPlane />, url: 'https://t.me/yourprofile', fontSize: 24, color: theme.palette.text.primary },
+  { icon: <FaGithub />, url: 'https://github.com/Morteza-Hoseinzadeh/', fontSize: 24, color: theme.palette.text.primary },
+  { icon: <FaLinkedinIn />, url: 'https://linkedin.com/in/morteza-hoseinzadeh-b735b7288', fontSize: 24, color: theme.palette.text.primary },
+  { icon: <FaTelegramPlane />, url: 'https://t.me/morteza_hnz', fontSize: 24, color: theme.palette.text.primary },
 ];
 
 export const statistices = [
