@@ -62,6 +62,8 @@ function App() {
           </CustomBox>
           <CustomBox>
             <Skills theme={theme} darkMode={darkMode} />
+          </CustomBox>
+          <CustomBox>
             <Socail theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>

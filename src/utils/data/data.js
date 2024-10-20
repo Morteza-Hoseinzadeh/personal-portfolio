@@ -24,7 +24,7 @@ import ArianaImg from '../../assets/image/Company-Images/ariana.webp';
 import Rahaco from '../../assets/image/Company-Images/rahaco.webp';
 import KishInstitute from '../../assets/image/Company-Images/KishInstitute.jpg';
 // Socail Media Icons
-import { FaGithub, FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 // Navbar links
