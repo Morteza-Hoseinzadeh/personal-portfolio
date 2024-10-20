@@ -45,9 +45,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SnowEffect />
       <Box sx={{ position: 'relative !important' }}>
-        <Navbar theme={theme} />
+        <Navbar theme={theme} isDarkMode={darkMode} />
         <Box sx={box_style(theme)}>
           <CustomBox>
             <HeroSection theme={theme} />
