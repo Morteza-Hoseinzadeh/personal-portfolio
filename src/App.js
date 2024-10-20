@@ -14,6 +14,7 @@ import Skills from './components/skills';
 import Biography from './components/biogarphy';
 import Experience from './components/experience';
 import Socail from './components/social';
+import ConatctMe from './components/contact-me';
 
 // Theme styles
 import { ThemeProvider } from '@mui/material/styles';
@@ -62,6 +63,9 @@ function App() {
           </CustomBox>
           <CustomBox>
             <Skills theme={theme} darkMode={darkMode} />
+          </CustomBox>
+          <CustomBox>
+            <ConatctMe theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
             <Socail theme={theme} darkMode={darkMode} />

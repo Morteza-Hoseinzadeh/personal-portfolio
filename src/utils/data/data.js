@@ -162,7 +162,7 @@ export const social_media_links = (color) => [
   {
     title: 'Instagram',
     icon: <FaInstagram size={48} color={color} />,
-    href: 'https://instagram.com/_itsmrtza_',
+    href: 'https://instagram.com/frontend_morteza',
   },
   {
     title: 'Gmail',
