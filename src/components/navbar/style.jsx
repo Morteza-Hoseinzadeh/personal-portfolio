@@ -44,11 +44,33 @@ export const links_style = (theme) => ({
   },
 });
 
-export const icon_style = (theme) => ({
+export const icon_style = (theme, darkModeColorControl) => ({
   display: 'flex',
   gap: 3,
   svg: {
     cursor: 'pointer',
-    color: theme.palette.text.primary,
+    color: darkModeColorControl,
   },
+});
+
+export const humberger_menu = (theme) => ({
+  position: 'sticky',
+  top: 10,
+  zIndex: 100,
+  m: 3,
+  p: '12px 20px',
+  background: 'rgba(255, 255, 255, 0)',
+  borderRadius: '45px',
+  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+  backdropFilter: 'blur(8.9px)',
+});
+
+export const justify_items = (align) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: align,
+});
+
+export const drawer_section = (theme) => ({
+  '.MuiDrawer-paper': { backgroundColor: theme.palette.primary.dark },
 });

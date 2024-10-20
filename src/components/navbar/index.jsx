@@ -1,45 +1,124 @@
-import React from 'react';
-// Mui import's
-import { Box } from '@mui/material';
-// Custom style's
-import { icon_style, links_style, nav_style } from './style';
-// Ui components
-import CustomTypography from '../../custom-components/typography/index';
-import { NavLinks } from './components/links';
+import React, { useState } from 'react';
+// Mui imports
+import { Box, Divider, Drawer, Grid2, Link, List, ListItem, ListItemButton, ListItemText, Typography, useMediaQuery } from '@mui/material';
+// Redux Store
+import { useDispatch, useSelector } from 'react-redux';
+import { changeTheme } from '../../utils/redux/action';
 // Icons
 import { BsTranslate } from 'react-icons/bs';
 import { MdOutlineWbSunny } from 'react-icons/md';
 import { FaRegMoon } from 'react-icons/fa';
-// Redux state
-import { useDispatch, useSelector } from 'react-redux';
-import { changeTheme } from '../../utils/redux/action';
+import { CgMenu } from 'react-icons/cg';
+// Dataes
+import { nav_links } from '../../utils/data/data';
+// Custom styles
+import { drawer_section, humberger_menu, icon_style, justify_items, links_style, nav_style } from './style';
+import { NavLinks } from './components/links';
 
-function Navbar({ theme }) {
+// Reusable Icons and Theming Toggle
+const ThemeIcon = ({ isDarkMode, toggleDarkMode }) => (
+  <Box onClick={toggleDarkMode} sx={{ cursor: 'pointer' }}>
+    {isDarkMode ? <MdOutlineWbSunny size={24} /> : <FaRegMoon size={24} />}
+  </Box>
+);
+
+// Drawer List Component
+const DrawerContent = ({ onClose }) => (
+  <Box role='presentation' sx={{ width: 250 }}>
+    <Box m={2}>
+      <Typography variant='h4' fontWeight='bold'>
+        Portfolio
+      </Typography>
+    </Box>
+    <Divider />
+    <List>
+      {nav_links.map((item, index) => (
+        <ListItem key={index} disablePadding>
+          <ListItemButton onClick={onClose}>
+            <ListItemText>
+              <Link style={{ textDecoration: 'none', fontSize: 18 }}>{item.title}</Link>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+      ))}
+    </List>
+    <Divider />
+  </Box>
+);
+
+// Navbar Component
+export default function Navbar({ theme }) {
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const dispatch = useDispatch();
   const { darkMode } = useSelector((state) => state.darkMode);
 
-  const handleDarkMode = () => {
+  // Toggle dark/light mode
+  const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     dispatch(changeTheme(newDarkMode));
     localStorage.setItem('isDarkMode', newDarkMode);
   };
 
+  // Drawer open/close handlers
+  const openDrawer = () => setDrawerOpen(true);
+  const closeDrawer = () => setDrawerOpen(false);
+
+  const darkModeColorControl = darkMode ? theme.palette.primary.light : theme.palette.primary.dark;
+
   return (
-    <Box sx={nav_style(theme)}>
-      <Box>
-        <CustomTypography variant={'h4'} fontWeight={'bold'} theme={theme}>
-          Portfolio
-        </CustomTypography>
-      </Box>
-      <Box sx={links_style(theme)}>
-        <NavLinks theme={theme} />
-      </Box>
-      <Box sx={icon_style(theme)}>
-        <BsTranslate size={24} />
-        {darkMode ? <MdOutlineWbSunny size={24} onClick={handleDarkMode} /> : <FaRegMoon size={24} onClick={handleDarkMode} />}
-      </Box>
-    </Box>
+    <>
+      {isMobile ? (
+        <MobileNavbar
+          theme={theme}
+          darkModeColorControl={darkModeColorControl}
+          openDrawer={openDrawer}
+          isDrawerOpen={isDrawerOpen}
+          closeDrawer={closeDrawer}
+          toggleDarkMode={toggleDarkMode}
+          darkMode={darkMode}
+        />
+      ) : (
+        <DesktopNavbar theme={theme} darkModeColorControl={darkModeColorControl} toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+      )}
+    </>
   );
 }
 
-export default Navbar;
+// Mobile Navbar Component
+const MobileNavbar = ({ theme, darkModeColorControl, openDrawer, isDrawerOpen, closeDrawer, toggleDarkMode, darkMode }) => (
+  <Grid2 container spacing={4} sx={humberger_menu(theme)}>
+    <Grid2 item size={6} sx={justify_items('left')}>
+      <Typography variant='h4' fontWeight='bold' color={darkModeColorControl}>
+        Portfolio
+      </Typography>
+    </Grid2>
+    <Grid2 item size={6} sx={justify_items('right')}>
+      <Box sx={{ ...icon_style(theme, darkModeColorControl), mr: 4 }}>
+        <ThemeIcon isDarkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      </Box>
+      <Box sx={{ cursor: 'pointer' }}>
+        <CgMenu size={24} color={darkModeColorControl} onClick={openDrawer} />
+      </Box>
+    </Grid2>
+    <Drawer anchor='left' open={isDrawerOpen} onClose={closeDrawer} sx={drawer_section(theme)}>
+      <DrawerContent onClose={closeDrawer} />
+    </Drawer>
+  </Grid2>
+);
+
+// Desktop Navbar Component
+const DesktopNavbar = ({ theme, darkModeColorControl, toggleDarkMode, darkMode }) => (
+  <Box sx={nav_style(theme)}>
+    <Typography variant='h4' fontWeight='bold' color={darkModeColorControl}>
+      Portfolio
+    </Typography>
+    <Box sx={links_style(theme)}>
+      <NavLinks theme={theme} />
+    </Box>
+    <Box sx={icon_style(theme, darkModeColorControl)}>
+      <BsTranslate size={24} />
+      <ThemeIcon isDarkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    </Box>
+  </Box>
+);
