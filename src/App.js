@@ -9,6 +9,7 @@ import { Box } from '@mui/material';
 // components
 import Navbar from './components/navbar';
 import HeroSection from './components/hero-section';
+import ConatctMe from './components/contact-me';
 
 // Theme styles
 import { ThemeProvider } from '@mui/material/styles';
@@ -45,6 +46,9 @@ function App() {
         <Box sx={box_style(theme)}>
           <CustomBox>
             <HeroSection theme={theme} />
+          </CustomBox>
+          <CustomBox>
+            <ConatctMe theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>
       </Box>

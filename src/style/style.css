@@ -25,3 +25,29 @@
 body {
   overflow-x: hidden;
 }
+
+input,
+textarea {
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 8px;
+  height: 45px;
+  border: #fff 2px solid;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  transition: all ease-in 0.15s;
+  &::placeholder {
+    color: #fff;
+    opacity: 0.5;
+  }
+  &:focus {
+    box-shadow: 1px 1px 5px #fff;
+    background-color: rebeccapurple;
+  }
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}

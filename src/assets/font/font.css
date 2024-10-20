@@ -8,3 +8,7 @@
     url('https://db.onlinewebfonts.com/t/4679956de12dd2d8fc06ed0333e1d21b.ttf') format('truetype'),
     url('https://db.onlinewebfonts.com/t/4679956de12dd2d8fc06ed0333e1d21b.svg#Proxima Soft') format('svg');
 }
+input,
+textarea {
+  font-family: 'Proxima Soft';
+}
