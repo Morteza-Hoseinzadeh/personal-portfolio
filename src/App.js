@@ -59,6 +59,9 @@ function App() {
             <Biography theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
+            <Socail theme={theme} darkMode={darkMode} />
+          </CustomBox>
+          <CustomBox>
             <Experience theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
@@ -66,9 +69,6 @@ function App() {
           </CustomBox>
           <CustomBox>
             <ConatctMe theme={theme} darkMode={darkMode} />
-          </CustomBox>
-          <CustomBox>
-            <Socail theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>
       </Box>
