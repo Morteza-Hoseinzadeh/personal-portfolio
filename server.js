@@ -7,10 +7,10 @@ const MongoStore = require("connect-mongo");
 const cors = require("cors");
 
 const App = express();
-const PORT = 3000;
+const PORT = 5000;
 
 // Enable CORS
-App.use(cors({ origin: "http://localhost:3000", credentials: true }));
+App.use(cors({ origin: "http://localhost:5000", credentials: true }));
 
 // Middleware to parse JSON bodies
 App.use(bodyParser.json());
@@ -73,11 +73,11 @@ App.post("/send-msg", async (req, res) => {
 
     // Send a response including a session check
     res.status(200).json({
-      message: "Form data saved successfully!",
-      sessionData: req.session.user,
+      message: "Message sent successfully",
+      payload: req.body,
     });
   } catch (error) {
-    res.status(500).json({ message: "Error saving form data", error });
+    res.status(500).json({ message: "Sending message failed", error });
   }
 });
 
