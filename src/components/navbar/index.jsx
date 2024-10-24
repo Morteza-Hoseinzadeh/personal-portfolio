@@ -125,7 +125,7 @@ const DesktopNavbar = ({ theme, darkModeColorControl, toggleDarkMode, darkMode }
       <NavLinks theme={theme} />
     </Box>
     <Box sx={icon_style(theme, darkModeColorControl)}>
-      <BsTranslate size={24} />
+      {/* <BsTranslate size={24} /> */}
       <ThemeIcon isDarkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </Box>
   </Box>
