@@ -21,7 +21,6 @@ import { RiTeamLine } from 'react-icons/ri';
 import { FaCode } from 'react-icons/fa';
 import { BiCoffee } from 'react-icons/bi';
 import ArianaImg from '../../assets/image/Company-Images/ariana.webp';
-import Rahaco from '../../assets/image/Company-Images/rahaco.webp';
 import KishInstitute from '../../assets/image/Company-Images/KishInstitute.jpg';
 // Socail Media Icons
 import { FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
@@ -101,14 +100,6 @@ export const experience_info = {
           description: 'Creating adaptive and responsive layouts that provide a seamless experience across various devices and screen sizes.',
         },
       ],
-    },
-    {
-      name: 'Rahaco',
-      field: 'Intern Frontend Developer',
-      date: '2023',
-      url: 'https://rahaco.net/?lang=en',
-      img: Rahaco,
-      desc: [],
     },
     {
       name: 'Kish Institute',
