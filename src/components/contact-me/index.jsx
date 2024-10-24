@@ -4,7 +4,7 @@ import CustomTypography from '../../custom-components/typography';
 // MUI imports
 import { Box, Button, Grid2 } from '@mui/material';
 // Custom styles
-import { conatct_section, contact_me_section_style, input_style } from './style';
+import { conatct_section, contact_me_section_style, input_style, snackbarStyle } from './style';
 // Axios service
 import axios from 'axios';
 // Icons
@@ -14,27 +14,44 @@ import { MdOutlineMail } from 'react-icons/md';
 
 export default function ContactMe({ theme, darkMode }) {
   const formList = ['First Name', 'Last Name', 'Email', 'Phone Number', 'Message'];
+  const [snackbar, setSnackbar] = useState({ message: '', type: '' });
 
   const initialForm = { first_name: '', last_name: '', email: '', phone_number: '', message: '' };
   const [messageForm, setMessageForm] = useState(initialForm);
 
-  // Correctly update form state without overwriting
   const handleInputs = (key, value) => {
     setMessageForm((prev) => ({ ...prev, [key]: value }));
-    console.log(messageForm);
   };
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+
     axios
-      .post('/send-msg', messageForm)
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+      .post('/send', messageForm)
+      .then((res) => {
+        setSnackbar({ message: res.data.message, type: 'success' });
+        setTimeout(() => {
+          setSnackbar({ message: '' });
+        }, 3000);
+      })
+      .catch((err) => {
+        setSnackbar({ message: err.message || 'An error occurred', type: 'error' });
+        setTimeout(() => {
+          setSnackbar({ message: '' });
+        }, 3000);
+      });
   };
 
   return (
     <section id='Contact'>
+      {snackbar.message && snackbar.type && (
+        <Box sx={snackbarStyle(theme, snackbar)}>
+          <CustomTypography variant={'body1'} theme={theme}>
+            {snackbar.message}
+          </CustomTypography>
+        </Box>
+      )}
+
       <Box textAlign={'center'} mb={3}>
         <Header theme={theme} />
       </Box>

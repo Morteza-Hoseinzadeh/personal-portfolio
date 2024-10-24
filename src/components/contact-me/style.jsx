@@ -22,3 +22,13 @@ export const conatct_section = {
     fontSize: 120,
   },
 };
+
+export const snackbarStyle = (theme, snackbar) => ({
+  position: 'fixed',
+  bottom: 0,
+  right: 0,
+  m: 3,
+  backgroundColor: snackbar.type === 'success' ? theme.palette.success.dark : theme.palette.error.dark,
+  p: 2,
+  borderRadius: '12px',
+});
