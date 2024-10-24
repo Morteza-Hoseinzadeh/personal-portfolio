@@ -27,7 +27,7 @@ export default function ContactMe({ theme, darkMode }) {
     e.preventDefault();
 
     axios
-      .post('/send', messageForm)
+      .post('/send-msg', messageForm)
       .then((res) => {
         setSnackbar({ message: res.data.message, type: 'success' });
         setTimeout(() => {
