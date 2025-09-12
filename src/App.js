@@ -9,12 +9,10 @@ import { Box } from '@mui/material';
 // components
 import Navbar from './components/navbar';
 import HeroSection from './components/hero-section';
-import Statistices from './components/statistices';
 import Skills from './components/skills';
 import Biography from './components/biogarphy';
 import Experience from './components/experience';
 import Socail from './components/social';
-import ConatctMe from './components/contact-me';
 
 // Theme styles
 import { ThemeProvider } from '@mui/material/styles';
@@ -23,7 +21,6 @@ import themeDark from './utils/theme/darkTheme';
 
 // Redux store
 import { useSelector } from 'react-redux';
-import SnowEffect from './utils/style/snowEffect/snowEffect';
 
 const box_style = (theme) => ({
   fontFamily: theme.typography.fontFamily,
@@ -52,9 +49,6 @@ function App() {
             <HeroSection theme={theme} />
           </CustomBox>
           <CustomBox>
-            <Statistices theme={theme} darkMode={darkMode} />
-          </CustomBox>
-          <CustomBox>
             <Biography theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
@@ -66,9 +60,6 @@ function App() {
           <CustomBox>
             <Skills theme={theme} darkMode={darkMode} />
           </CustomBox>
-          <CustomBox>
-            <ConatctMe theme={theme} darkMode={darkMode} />
-          </CustomBox>
         </Box>
       </Box>
     </ThemeProvider>
@@ -76,7 +67,7 @@ function App() {
 }
 
 function CustomBox({ children }) {
-  return <Box mb={12}>{children}</Box>;
+  return <Box mb={8}>{children}</Box>;
 }
 
 export default App;

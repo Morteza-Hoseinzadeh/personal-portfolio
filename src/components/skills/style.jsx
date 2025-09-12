@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 
 // Styled component for the skill card container
 export const SkillCardContainer = ({ theme, darkMode }) => ({
+  width: '100%',
   padding: '16px',
   borderRadius: '12px',
   display: 'flex',

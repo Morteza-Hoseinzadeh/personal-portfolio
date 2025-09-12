@@ -3,8 +3,6 @@ import React from 'react';
 import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import { useMediaQuery } from '@mui/material';
-// Data
-import { skills_data } from '../../utils/data/data';
 // Custom components
 import CustomTypography from '../custom/typography/index';
 import SkillCard from './components/SkillCards';
@@ -26,11 +24,7 @@ export default function Skills({ theme, darkMode }) {
           </CustomTypography>
         </Box>
       </Box>
-      <Grid container spacing={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
-        {skills_data.map((skill, index) => (
-          <SkillCard key={index} skill={skill} darkMode={darkMode} theme={theme} />
-        ))}
-      </Grid>
+      <SkillCard darkMode={darkMode} theme={theme} />
     </section>
   );
 }
