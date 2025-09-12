@@ -2,7 +2,7 @@ import React from 'react';
 // MUI Imports
 import { Box, Grid2, Link } from '@mui/material';
 // Custom components
-import CustomTypography from '../../custom-components/typography';
+import CustomTypography from '../custom/typography/index';
 // Dataes
 import { social_media_links } from '../../utils/data/data';
 

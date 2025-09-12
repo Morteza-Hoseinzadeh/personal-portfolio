@@ -1,6 +1,6 @@
 import React from 'react';
 // Custom components
-import CustomTypography from '../../../custom-components/typography';
+import CustomTypography from '../../custom/typography/index';
 // MUI imports
 import { Box, Button, IconButton } from '@mui/material';
 // Icon Array

@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 // style
-import './style/style.css';
-import './assets/font/font.css';
+import './utils/style/style.css';
+import './utils/assets/font/font.css';
 
 // Mui imports
 import { Box } from '@mui/material';
@@ -23,7 +23,7 @@ import themeDark from './utils/theme/darkTheme';
 
 // Redux store
 import { useSelector } from 'react-redux';
-import SnowEffect from './style/snowEffect/snowEffect';
+import SnowEffect from './utils/style/snowEffect/snowEffect';
 
 const box_style = (theme) => ({
   fontFamily: theme.typography.fontFamily,

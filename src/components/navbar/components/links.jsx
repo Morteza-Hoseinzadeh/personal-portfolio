@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomTypography from '../../../custom-components/typography';
+import CustomTypography from '../../custom/typography/index';
 import { nav_links } from '../../../utils/data/data';
 import { Box } from '@mui/material';
 // Import React Scroll

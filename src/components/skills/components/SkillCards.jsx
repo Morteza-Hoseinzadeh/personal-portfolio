@@ -3,7 +3,7 @@ import React from 'react';
 import Grid from '@mui/material/Grid2';
 import { Box } from '@mui/material';
 // Custom components
-import CustomTypography from '../../../custom-components/typography';
+import CustomTypography from '../../custom/typography/index';
 // Styles
 import { grid_cards_container, SkillCardContainer } from '../style';
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // Custom component
-import CustomTypography from '../../custom-components/typography';
+import CustomTypography from '../../components/custom/typography/index';
 // MUI imports
 import { Box, Button, Grid2 } from '@mui/material';
 // Custom styles

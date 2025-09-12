@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // Mui import's
 import { Box, Grid2, Link, useMediaQuery } from '@mui/material';
 // Custom components
-import CustomTypography from '../../custom-components/typography';
+import CustomTypography from '../../components/custom/typography/index';
 // Icons
 import { FaLink } from 'react-icons/fa6';
 import { IoIosArrowDown } from 'react-icons/io';

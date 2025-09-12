@@ -1,12 +1,11 @@
-import React from 'react';
 // MUI imports
 import { Box, Divider, Grid2, Stack, Typography, useMediaQuery } from '@mui/material';
 // Style
 import { ListSectionCard } from './style';
 // Custom components
-import CustomTypography from '../../custom-components/typography';
+import CustomTypography from '../custom/typography/index';
 // My avatar
-import myAvatar from '../../assets/image/avatar/my-avatar.jpg';
+import myAvatar from '../../utils/assets/image/avatar/my-avatar.jpg';
 // Data source
 import { my_strengths } from '../../utils/data/data';
 

@@ -6,7 +6,7 @@ import { useMediaQuery } from '@mui/material';
 // Data
 import { skills_data } from '../../utils/data/data';
 // Custom components
-import CustomTypography from '../../custom-components/typography';
+import CustomTypography from '../custom/typography/index';
 import SkillCard from './components/SkillCards';
 // Styles
 import { grid_cards_container } from './style';

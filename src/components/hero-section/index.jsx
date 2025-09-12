@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid2, Tooltip, useMediaQuery } from '@mui/material';
 
 // Hero section image import
-import heroSectionImg from '../../assets/image/hero-section-image/background.png';
+import heroSectionImg from '../../utils/assets/image/hero-section-image/background.png';
 import TitleSection from './components/titleSection';
 // Custom styles
 import { hero_section_container, hero_section_image } from './style';

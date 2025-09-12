@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomTypography from '../../../custom-components/typography';
+import CustomTypography from '../../custom/typography/index';
 import { Divider, Stack } from '@mui/material';
 
 const CustomDivider = () => {
