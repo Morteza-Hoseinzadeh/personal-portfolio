@@ -49,6 +49,9 @@ function App() {
             <HeroSection theme={theme} />
           </CustomBox>
           <CustomBox>
+            <Skills theme={theme} darkMode={darkMode} />
+          </CustomBox>
+          <CustomBox>
             <Biography theme={theme} darkMode={darkMode} />
           </CustomBox>
           <CustomBox>
@@ -56,9 +59,6 @@ function App() {
           </CustomBox>
           <CustomBox>
             <Experience theme={theme} darkMode={darkMode} />
-          </CustomBox>
-          <CustomBox>
-            <Skills theme={theme} darkMode={darkMode} />
           </CustomBox>
         </Box>
       </Box>

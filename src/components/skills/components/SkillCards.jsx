@@ -12,7 +12,7 @@ import { skills_data } from '../../../utils/data/data';
 import { SkillCardContainer } from '../style';
 
 export default function SkillCard({ darkMode, theme }) {
-  const types = ['frontend', 'styling', 'library', 'state_management', 'project_managers', 'tool', 'others'];
+  const types = ['frontend', 'styling', 'library', 'state_management', 'project_managers', 'databases', 'tool', 'others'];
 
   return (
     <Box width='100%'>

@@ -26,10 +26,10 @@ export default function Experience({ darkMode, theme }) {
         <Grid2 size={{ xs: 12, lg: 6 }}>
           <Box mb={4} display={'flex'} justifyContent={'center'} alignItems={'center'}>
             <CustomTypography theme={theme} variant={'h3'} fontWeight={'bold'}>
-              Education
+              Projects
             </CustomTypography>
           </Box>
-          <CardsSection theme={theme} darkMode={darkMode} data={experience_info.education} />
+          <CardsSection theme={theme} darkMode={darkMode} data={experience_info.projects} />
         </Grid2>
       </Grid2>
     </section>

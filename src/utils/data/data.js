@@ -26,15 +26,22 @@ import sokcetIo from '../../utils/assets/icons/socket-io.svg';
 import vsCode from '../../utils/assets/icons/visual-studio-code-1.svg';
 import zustand from '../../utils/assets/icons/zustand.png';
 import redux from '../../utils/assets/icons/redux.svg';
+import mySql from '../../utils/assets/icons/icons8-mysql.svg';
+import mongoDb from '../../utils/assets/icons/icons8-mongodb.svg';
+import firebase from '../../utils/assets/icons/firebase-1.svg';
 
 // About me Icons
 import { IoDiamondOutline } from 'react-icons/io5';
 import { RiTeamLine } from 'react-icons/ri';
 import { FaCode } from 'react-icons/fa';
 import { BiCoffee } from 'react-icons/bi';
+
+// Companies img
 import ArianaImg from '../../utils/assets/image/Company-Images/ariana.webp';
 import Rahaco from '../../utils/assets/image/Company-Images/rahaco.webp';
 import KishInstitute from '../../utils/assets/image/Company-Images/KishInstitute.jpg';
+import ZephyrTeamImg from '../../utils/assets/image/Company-Images/zephyr-bgRemoved-purple.png';
+import RenderImg from '../../utils/assets/image/Company-Images/render-seeklogo.png';
 
 // Socail Media Icons
 import { FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
@@ -42,24 +49,17 @@ import { MdEmail } from 'react-icons/md';
 
 // Navbar links
 export const nav_links = [
+  { title: 'Skills', to: 'Skills' },
   { title: 'About', to: 'About' },
   { title: 'Social', to: 'Social' },
   { title: 'Experience', to: 'Experience' },
-  { title: 'Skills', to: 'Skills' },
 ];
 
 // Hero section icons
 export const icon_properties = (theme) => [
   { icon: <FaGithub />, url: 'https://github.com/Morteza-Hoseinzadeh/', fontSize: 24, color: theme.palette.text.primary },
   { icon: <FaLinkedinIn />, url: 'https://linkedin.com/in/morteza-hoseinzadeh-b735b7288', fontSize: 24, color: theme.palette.text.primary },
-  { icon: <FaTelegramPlane />, url: 'https://t.me/morteza_hnz', fontSize: 24, color: theme.palette.text.primary },
-];
-
-export const statistices = [
-  { title: 'Years Of Experience', description: '2' },
-  { title: 'Project Completed', description: '4' },
-  { title: "Happy Client's", description: '4' },
-  { title: "Feedback's", description: '8' },
+  { icon: <FaTelegramPlane />, url: 'https://t.me/itsmrtza', fontSize: 24, color: theme.palette.text.primary },
 ];
 
 export const skills_data = {
@@ -100,6 +100,13 @@ export const skills_data = {
     { title: 'GitLab', src: gitLab, level: 'Beginner', type: 'tool' },
   ],
 
+  // Database
+  databases: [
+    { title: 'MySQL', src: mySql, level: 'Beginner', type: 'database' },
+    { title: 'MongoDB', src: mongoDb, level: 'Beginner', type: 'database' },
+    { title: 'Firebase Realtime', src: firebase, level: 'Beginner', type: 'database' },
+  ],
+
   // Tools
   tool: [
     { title: 'REST APIs', src: 'https://img.icons8.com/ios/64/api-settings.png', level: 'Advanced', type: 'tool' },
@@ -126,6 +133,23 @@ export const my_strengths = [
 // experience data
 export const experience_info = {
   experience: [
+    {
+      name: 'Zephyr Freelance Team',
+      field: 'Frontend Developer & Team Lead Member',
+      date: '2024 - Present',
+      url: 'https://zephyr-team.ir',
+      img: ZephyrTeamImg,
+      desc: [
+        {
+          title: 'Freelance Frontend Projects',
+          description: 'Developing React, Next.js, and full-stack projects for clients while managing team workflows and delivering projects on time.',
+        },
+        {
+          title: 'Collaboration & Project Management',
+          description: 'Using Agile and task management tools to coordinate with team members, review code, and ensure quality delivery.',
+        },
+      ],
+    },
     {
       name: 'Ariana Labs',
       field: 'Frontend Developer',
@@ -168,30 +192,28 @@ export const experience_info = {
       desc: [],
     },
   ],
-  education: [
+
+  projects: [
     {
-      name: 'Ghods Technical and Vocational High School',
-      field: 'High School Diploma in Computer Science',
-      date: '2023',
-      url: 'https://madyar.org/School/3456',
-      desc: [],
-    },
-    {
-      name: 'Kish Institute',
-      field: 'TTC (Teacher Training Course)',
-      date: '2022',
-      url: 'https://www.kish-ist.net/Home/Index/En',
-      desc: [],
-    },
-    {
-      name: 'Kish Institute',
-      field: 'E4A (Solution Advance Course)',
-      date: '2021',
-      url: 'https://www.kish-ist.net/Home/Index/En',
-      desc: [],
+      name: 'Render.com Profile',
+      field: 'Personal Portfolio & Cloud Projects',
+      date: '2023 - Present',
+      url: 'https://dashboard.render.com/u/usr-d31ebiumcj7s738bvb80',
+      img: RenderImg,
+      desc: [
+        {
+          title: 'Cloud Deployments',
+          description: 'Managing deployment of web applications on Render.com, optimizing for uptime and scalability.',
+        },
+        {
+          title: 'Portfolio Management',
+          description: 'Showcasing personal projects and freelance work, including live demos and source code references.',
+        },
+      ],
     },
   ],
 };
+
 export const social_media_links = (color) => [
   {
     title: 'Github',
@@ -206,12 +228,12 @@ export const social_media_links = (color) => [
   {
     title: 'Telegram',
     icon: <FaTelegram size={48} color={color} />,
-    href: 'https://t.me/morteza_hnz',
+    href: 'https://t.me/itsmrtza',
   },
   {
     title: 'Instagram',
     icon: <FaInstagram size={48} color={color} />,
-    href: 'https://instagram.com/frontend_morteza',
+    href: 'https://instagram.com/_itsmrtza_',
   },
   {
     title: 'Gmail',

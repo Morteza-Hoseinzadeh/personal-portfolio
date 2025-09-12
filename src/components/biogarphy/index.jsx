@@ -46,9 +46,7 @@ const BiographySection = ({ theme, isMatchMdDown }) => (
     )}
     <Box>
       <Typography fontSize={18} color={theme.palette.primary.main}>
-        I’m Morteza Hosseinzadeh, a 19-year-old frontend developer with a passion for learning and technology. I’ve developed skills in HTML, CSS,
-        SASS, Bootstrap, Tailwind, JavaScript, jQuery, React.js, TypeScript, Next.js, Git, npm, Yarn, and MUI. I’m dedicated to creating responsive,
-        user-friendly interfaces and eager to tackle new challenges in web development.
+        Hi, I’m Morteza Hosseinzadeh, born in 2005, a frontend developer passionate about creating engaging and efficient web experiences. I enjoy designing responsive and user-friendly interfaces, solving complex problems, and continuously learning to grow as a developer. I’m always excited to take on new challenges and contribute to meaningful digital projects.
       </Typography>
     </Box>
   </Box>
