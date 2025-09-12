@@ -1,6 +1,5 @@
 import React from 'react';
 // MUI imports
-import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import { useMediaQuery } from '@mui/material';
 // Custom components
@@ -19,9 +18,7 @@ export default function Skills({ theme, darkMode }) {
           My Skills
         </CustomTypography>
         <Box width={matchMdDown ? '100%' : '50%'} marginTop={2}>
-          <CustomTypography theme={theme}>
-            I am always eager to learn new technologies and stay updated with industry trends to enhance my skills and deliver high-quality solutions.
-          </CustomTypography>
+          <CustomTypography theme={theme}>I am always eager to learn new technologies and stay updated with industry trends to enhance my skills and deliver high-quality solutions.</CustomTypography>
         </Box>
       </Box>
       <SkillCard darkMode={darkMode} theme={theme} />

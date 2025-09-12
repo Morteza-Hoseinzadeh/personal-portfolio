@@ -1,6 +1,6 @@
 import React from 'react';
 // MUI Imports
-import { Box, Grid2, Link } from '@mui/material';
+import { Box, Link } from '@mui/material';
 // Custom components
 import CustomTypography from '../custom/typography/index';
 // Dataes
