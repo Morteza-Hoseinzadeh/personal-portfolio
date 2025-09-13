@@ -43,6 +43,7 @@ import KishInstitute from '../../utils/assets/image/Company-Images/KishInstitute
 import ZephyrTeamImg from '../../utils/assets/image/Company-Images/zephyr-bgRemoved-purple.png';
 import RenderImg from '../../utils/assets/image/Company-Images/render-seeklogo.png';
 import VercelImg from '../../utils/assets/image/Company-Images/vercel.png';
+import npmLogo from '../../utils/assets/image/Company-Images/npmLogo.png';
 
 // Socail Media Icons
 import { FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
@@ -195,6 +196,27 @@ export const experience_info = {
   ],
 
   projects: [
+    {
+      name: 'Zephyr Chrome Extension CLI',
+      field: 'Open Source NPM Package',
+      date: '2025 - Present',
+      url: 'https://www.npmjs.com/package/zephyr-chrome-extension-cli',
+      img: npmLogo,
+      desc: [
+        {
+          title: 'CLI Tool Development',
+          description: 'Created a CLI tool to scaffold and publish Chrome extensions efficiently, improving developer workflow.',
+        },
+        {
+          title: 'Open Source Contribution',
+          description: 'Published and maintained on npm with semantic versioning, available for the developer community.',
+        },
+        {
+          title: 'Node.js & JavaScript',
+          description: 'Built using Node.js, JavaScript, and npm ecosystem tools to deliver a reliable developer experience.',
+        },
+      ],
+    },
     {
       name: 'Render.com Profile',
       field: 'Personal Portfolio & Cloud Projects',

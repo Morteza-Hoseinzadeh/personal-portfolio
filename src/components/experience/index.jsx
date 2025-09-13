@@ -56,7 +56,7 @@ const CardsSection = ({ theme, darkMode, data }) => {
         <Grid2 key={index} size={12}>
           <Box sx={experience_section_style(theme, darkMode)}>
             <Box display='flex' gap={2}>
-              {img && <img src={img} alt={`${name} logo`} style={imgStyle} />}
+              {img && <img src={img} alt={`${name} logo`} style={{ ...imgStyle, objectFit: name.includes('CLI') && 'contain' }} />}
               <Box display='flex' flexDirection='column'>
                 <CustomTypography theme={theme} variant='h5' fontWeight='bold'>
                   {name}
