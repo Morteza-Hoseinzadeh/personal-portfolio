@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 
 // Mui imports
-import { Box, Divider, Drawer, Grid2, Link, List, ListItem, ListItemButton, ListItemText, Typography, useMediaQuery } from '@mui/material';
+import { Box, Divider, Drawer, Grid2, List, ListItem, ListItemButton, ListItemText, Typography, useMediaQuery } from '@mui/material';
 
 // Redux Store
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from '../../utils/redux/action';
 
 // Icons
-import { BsTranslate } from 'react-icons/bs';
 import { MdOutlineWbSunny } from 'react-icons/md';
 import { FaRegMoon } from 'react-icons/fa';
 import { CgMenu } from 'react-icons/cg';
@@ -74,23 +73,7 @@ export default function Navbar({ theme }) {
 
   const darkModeColorControl = darkMode ? theme.palette.primary.light : theme.palette.primary.dark;
 
-  return (
-    <>
-      {isMobile ? (
-        <MobileNavbar
-          theme={theme}
-          darkModeColorControl={darkModeColorControl}
-          openDrawer={openDrawer}
-          isDrawerOpen={isDrawerOpen}
-          closeDrawer={closeDrawer}
-          toggleDarkMode={toggleDarkMode}
-          darkMode={darkMode}
-        />
-      ) : (
-        <DesktopNavbar theme={theme} darkModeColorControl={darkModeColorControl} toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      )}
-    </>
-  );
+  return <>{isMobile ? <MobileNavbar theme={theme} darkModeColorControl={darkModeColorControl} openDrawer={openDrawer} isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer} toggleDarkMode={toggleDarkMode} darkMode={darkMode} /> : <DesktopNavbar theme={theme} darkModeColorControl={darkModeColorControl} toggleDarkMode={toggleDarkMode} darkMode={darkMode} />}</>;
 }
 
 // Mobile Navbar Component
