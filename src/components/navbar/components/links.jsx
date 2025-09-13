@@ -7,7 +7,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 export const NavLinks = ({ theme }) => {
   return (
-    <>
+    <Box ml={2} display={'flex'} alignItems={'center'}>
       {nav_links?.map((link, index) => (
         <Box key={index}>
           <CustomTypography theme={theme}>
@@ -17,6 +17,6 @@ export const NavLinks = ({ theme }) => {
           </CustomTypography>
         </Box>
       ))}
-    </>
+    </Box>
   );
 };

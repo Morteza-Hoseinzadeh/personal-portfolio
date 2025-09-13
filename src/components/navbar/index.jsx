@@ -101,10 +101,10 @@ const MobileNavbar = ({ theme, darkModeColorControl, openDrawer, isDrawerOpen, c
 // Desktop Navbar Component
 const DesktopNavbar = ({ theme, darkModeColorControl, toggleDarkMode, darkMode }) => (
   <Box sx={nav_style(theme)}>
-    <Typography variant='h4' fontWeight='bold' color={darkModeColorControl}>
-      Portfolio
-    </Typography>
     <Box sx={links_style(theme)}>
+      <Typography variant='h4' fontWeight='bold' color={darkModeColorControl}>
+        Portfolio
+      </Typography>
       <NavLinks theme={theme} />
     </Box>
     <Box sx={icon_style(theme, darkModeColorControl)}>
