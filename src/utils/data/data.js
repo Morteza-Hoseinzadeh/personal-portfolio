@@ -42,6 +42,7 @@ import Rahaco from '../../utils/assets/image/Company-Images/rahaco.webp';
 import KishInstitute from '../../utils/assets/image/Company-Images/KishInstitute.jpg';
 import ZephyrTeamImg from '../../utils/assets/image/Company-Images/zephyr-bgRemoved-purple.png';
 import RenderImg from '../../utils/assets/image/Company-Images/render-seeklogo.png';
+import VercelImg from '../../utils/assets/image/Company-Images/vercel.png';
 
 // Socail Media Icons
 import { FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
@@ -208,6 +209,23 @@ export const experience_info = {
         {
           title: 'Portfolio Management',
           description: 'Showcasing personal projects and freelance work, including live demos and source code references.',
+        },
+      ],
+    },
+    {
+      name: 'Vercel Profile',
+      field: 'Personal Portfolio & Cloud Projects',
+      date: '2023 - Present',
+      url: 'https://vercel.com/morteza-hoseinzadehs-projects-96835e4a',
+      img: VercelImg,
+      desc: [
+        {
+          title: 'Next.js Deployments',
+          description: 'Deploying and managing Next.js applications on Vercel with optimized performance and edge functions.',
+        },
+        {
+          title: 'Project Hosting',
+          description: 'Hosting portfolio projects and freelance applications with continuous integration and preview environments.',
         },
       ],
     },
